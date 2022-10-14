@@ -17,6 +17,7 @@ import java.io.Serializable;
 public class Account implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(updatable = false)
     private Long id;
     @Column(name = "first_name")
     private String firstName;
@@ -26,6 +27,8 @@ public class Account implements Serializable {
     private String username;
     @Column(name = "password", nullable = false)
     private String password;
+    @Column(name = "is_active", nullable = false)
+    private Boolean isActive = true;
 
 
 }

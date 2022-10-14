@@ -17,6 +17,7 @@ import java.util.Set;
 public class Tweet implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(updatable = false)
     private Long id;
     @Column(name = "content" , length = 280)
     private String content;
