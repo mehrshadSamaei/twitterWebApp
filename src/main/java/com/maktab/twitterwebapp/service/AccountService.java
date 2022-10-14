@@ -1,16 +1,17 @@
 package com.maktab.twitterwebapp.service;
 
 
-import com.maktab.twitterwebapp.dto.AccountDto;
+import com.maktab.twitterwebapp.dto.account.RegisterAccountRequestClient;
+import com.maktab.twitterwebapp.dto.account.RegisterAccountResponseClient;
 import com.maktab.twitterwebapp.entity.Account;
 
 import java.util.List;
 
 public interface AccountService {
 
-    Account save(Account account);
+    RegisterAccountResponseClient registerAccount(RegisterAccountRequestClient requestClient);
 
-    Account update (Long id, AccountDto accountDto);
+    Account update (Long id, RegisterAccountRequestClient registerAccountRequestClient);
 
     Account findById(Long id);
 

@@ -1,11 +1,11 @@
-package com.maktab.twitterwebapp.dto;
+package com.maktab.twitterwebapp.dto.account;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class AccountDto {
+public class RegisterAccountRequestClient {
 
     private String firstName;
     private String lastName;

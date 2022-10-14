@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -23,9 +24,8 @@ public class Tweet implements Serializable {
     private String content;
     @Column(name = "created_date")
     @Temporal(value = TemporalType.TIMESTAMP)
-    private Timestamp createdDate;
+    private Date createdDate;
     @ManyToOne
-    @Column(name = "account_owner")
     private Account accountOwner;
     @ElementCollection
     @Column(name = "accounts_id")

@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "comment")
@@ -24,7 +25,7 @@ public class Comment implements Serializable {
     private String content;
     @Column(name = "created_date")
     @Temporal(value = TemporalType.TIMESTAMP)
-    private Timestamp createdDate;
+    private Date createdDate;
     @ManyToOne
     private Tweet tweet;
     @ManyToOne
